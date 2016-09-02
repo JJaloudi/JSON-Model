@@ -2,7 +2,7 @@ class JSONRecords < ActiveRecord::Base
   #Create initial json_keys hash. This hash contains the variable name and options required to return the json necessary.
   @json_keys = {:key => "test"}
   class << self
-    attr_accessor :json_keys
+    attr_reader :json_keys
 
     #Options haven't been implemented yet, but will be in future updates.
     def json_accessor(j_attr, options={})
